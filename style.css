@@ -7,3 +7,45 @@
 header{
     background-color: #FAB240;
 }
+
+
+.knoepfe input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/******************************************** Männlich Weiblich Selector Style*/
+
+.knoepfe label {
+    border: 1px solid #333;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.knoepfe input:checked + label {
+    background: #ebf5d7;
+    color: #5a9900;
+    box-shadow: none;
+}
+
+input:hover + label,
+input:focus + label {
+    background: #ffebe6;
+}
+
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    border-width: 0px;
+
+}
