@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="de">
     <head>
         <meta charset="utf-8">
@@ -19,20 +19,24 @@
         <main>
             <h1>Kamelrechner</h1>
             <p></p>
+            <form name="kamelRechner" action="" onSubmit="Ergebnis();return false;">
+                <input name="Display" class="display">
 
-            <fieldset>
-                <div class="knoepfe">
+                <fieldset>
+                    <div class="knoepfe">
 
-                    <input type="radio" id="ma" name="geschlecht" value="5">
-                    <label for="ma">Männlich</label>
+                        <input type="radio" id="ma" name="geschlecht" value="5" onClick="addValueMan('5')">
+                        <label for="ma">Männlich</label>
 
-                    <input type="radio" id="wi" name="geschlecht" value="10">
-                    <label for="wi">Weiblich</label>
+                        <input type="radio" id="wi" name="geschlecht" value="10" onClick="addValueWoman('10')">
+                        <label for="wi">Weiblich</label>
 
-                </div>
-            </fieldset>
+                    </div>
+                </fieldset>
+            </form>
+
             <p>
-                <button class="btn">Show Selected Value</button>
+                <button class="btn" onClick="Ergebnis()">Ergebnis anzeigen</button>
             </p>
             <p id="output"></p>
         </main>
