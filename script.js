@@ -31,13 +31,15 @@ function Ergebnis() {
     if (Check(window.document.kamelRechner.Display.value))
         x = eval(window.document.kamelRechner.Display.value);
     window.document.kamelRechner.Display.value = x;
-    console.log("swaglvl2");
+    console.log("ergebnis");
 }
 
 function addValueMan(ZeichenMan) {
     window.document.kamelRechner.Display.value =
         window.document.kamelRechner.Display.value + ZeichenMan;
         document.getElementById("wi").addEventListener("click", removeValueMan);
+    document.getElementById("ma").disabled = true;
+    document.getElementById("wi").disabled = false;
 
 }
 
@@ -45,20 +47,55 @@ function addValueWoman(ZeichenWoman) {
     window.document.kamelRechner.Display.value =
         window.document.kamelRechner.Display.value + ZeichenWoman;
     document.getElementById("ma").addEventListener("click", removeValueWoman);
+    document.getElementById("ma").disabled = false;
+    document.getElementById("wi").disabled = true;
 
 }
 
-function removeValueMan(Zeichen) {
+function addValueAlter1(ZeichenAlter1) {
+    window.document.kamelRechner.Display.value =
+        window.document.kamelRechner.Display.value += ZeichenAlter1;
+    document.getElementById("alter2").addEventListener("click", removeValueAlter1);
+    document.getElementById("alter3").addEventListener("click", removeValueAlter1);
+    document.getElementById("alter4").addEventListener("click", removeValueAlter1);
+    document.getElementById("alter5").addEventListener("click", removeValueAlter1);
+    document.getElementById("alter6").addEventListener("click", removeValueAlter1);
+    document.getElementById("alter1").disabled = true;
+}
+
+function addValueAlter2(ZeichenAlter2) {
+    window.document.kamelRechner.Display.value =
+        window.document.kamelRechner.Display.value + ZeichenAlter2;
+    document.getElementById("alter2").disabled = true;
+}
+
+function removeValueMan() {
     window.document.kamelRechner.Display.value =
     window.document.kamelRechner.Display.value - 500;
 
     console.log("remove man -5")
 }
 
-function removeValueWoman(Zeichen) {
+function removeValueWoman() {
     window.document.kamelRechner.Display.value =
     window.document.kamelRechner.Display.value - 100;
 
     console.log("remove woman -10")
 }
+
+
+function removeValueAlter1() {
+    window.document.kamelRechner.Display.value =
+        window.document.kamelRechner.Display.value - 5;
+
+    console.log("remove woman -10")
+}
+
+function removeValueAlter2() {
+    window.document.kamelRechner.Display.value =
+        window.document.kamelRechner.Display.value - 100;
+
+    console.log("remove woman -10")
+}
+
 

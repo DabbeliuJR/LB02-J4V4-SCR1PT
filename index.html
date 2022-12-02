@@ -18,9 +18,9 @@
         </header>
         <main>
             <h1>Kamelrechner</h1>
-            <p></p>
-            <form name="kamelRechner" action="" onSubmit="Ergebnis();return false;">
-                <input name="Display" class="display">
+            <p>dies ist  der kamelrechner</p>
+            <form name="kamelRechner" action="" onSubmit="Ergebnis();return false;" >
+                <input name="Display" class="display" readonly>
 
                 <fieldset>
                     <div class="knoepfe">
@@ -33,6 +33,36 @@
 
                     </div>
                 </fieldset>
+
+                <div class="dropdown">
+                    <button class="dropbtn" disabled="disabled">Alter</button>
+                    <div class="dropdown-content">
+                     <fieldset>
+                         <input name="alter" type="radio" id="alter1" value="1" onCLick="addValueAlter1('5')">
+                         <label for="alter1">1</label>
+
+                         <input name="alter" type="radio" id="alter2" value="2" onCLick="addValueAlter2('10')">
+                         <label for="alter2">2</label>
+
+                         <input name="alter" type="radio" id="alter3" value="3" onCLick="addValueMan('2')">
+                         <label for="alter3">3</label>
+
+                         <input name="alter" type="radio" id="alter4" value="4" onCLick="addValueMan('21')">
+                         <label for="alter4">4</label>
+
+                         <input name="alter" type="radio" id="alter5" value="5" onCLick="addValueMan('6')">
+                         <label for="alter5">5</label>
+
+                         <input name="alter" type="radio" id="alter6" value="6" onCLick="addValueMan('7')">
+                         <label for="alter6">6</label>
+
+
+                     </fieldset>
+
+
+
+                    </div>
+                </div>
             </form>
 
             <p>
