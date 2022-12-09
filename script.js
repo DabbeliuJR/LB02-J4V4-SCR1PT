@@ -18,7 +18,7 @@ btn.addEventListener("click", () => {
     output.innerText = selectedSize ? `You selected ${selectedSize}` : `You haven't selected any size`;
 });
 */
-
+/*
 function Check(Eingabe) {
     var richtigeZeichen ="0123456789[]()-+*%/";
     for (var i = 0; i < Eingabe.length; i++)
@@ -98,4 +98,42 @@ function removeValueAlter2() {
     console.log("remove woman -10")
 }
 
+*/
 
+const btn = document.querySelector('#btn');
+
+
+const radioButtonsGender = parseInt(document.querySelectorAll('input[name="gender"]').value);
+const radioButtonsAge = parseInt(document.querySelectorAll('input[name="age"]').value);
+
+
+btn.addEventListener("click", () => {
+    let selectedGender;
+    for (const radioButton of radioButtonsGender) {
+        if (radioButton.checked) {
+            selectedGender = radioButton.value;
+            console.log("gender selection")
+            break;
+        }
+    }
+    /* Alter */
+    let selectedAge;
+    for (const radioButton of radioButtonsAge) {
+        if (radioButton.checked) {
+            selectedAge = radioButton.value;
+            console.log("age selection")
+            break;
+        }
+    }
+
+
+    var summe = eval(selectedAge + selectedGender)
+    console.log(summe);
+    // show the output:
+    output.innerText = summe  ? `You selected ${summe}` : `You haven't selected any size`;
+    console.log(selectedAge, selectedGender);
+
+});
+
+
+// https://joergs-forum.de/in-javascript-addieren-statt-zusammenfuegen-t-2109-1
