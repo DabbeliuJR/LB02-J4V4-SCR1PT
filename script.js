@@ -102,9 +102,10 @@ function removeValueAlter2() {
 
 const btn = document.querySelector('#btn');
 
+const radioButtonsGender = document.querySelectorAll('input[name="gender"]');
+const radioButtonsAge = document.querySelectorAll('input[name="age"]');
+const radioButtonsHeight = document.querySelectorAll('input[name="height"]');
 
-const radioButtonsGender = parseInt(document.querySelectorAll('input[name="gender"]').value);
-const radioButtonsAge = parseInt(document.querySelectorAll('input[name="age"]').value);
 
 
 btn.addEventListener("click", () => {
@@ -126,12 +127,21 @@ btn.addEventListener("click", () => {
         }
     }
 
+    let selectedHeight;
+    for (const radioButton of radioButtonsHeight) {
+        if (radioButton.checked) {
+            selectedHeight = radioButton.value;
+            console.log("height selection")
+            break;
+        }
+    }
 
-    var summe = eval(selectedAge + selectedGender)
+
+    var summe = eval(Number(selectedAge) + Number(selectedGender) + Number(selectedHeight));
     console.log(summe);
     // show the output:
     output.innerText = summe  ? `You selected ${summe}` : `You haven't selected any size`;
-    console.log(selectedAge, selectedGender);
+    console.log(selectedAge, selectedGender, selectedHeight);
 
 });
 
