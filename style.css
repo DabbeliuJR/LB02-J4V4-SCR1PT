@@ -6,6 +6,7 @@
 
 header{
     background-color: #FAB240;
+    margin: 2% 20%;
 }
 
 
@@ -114,3 +115,73 @@ fieldset {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+img {
+    height: 20%;
+    width: auto;
+}
+
+div {
+    margin-bottom: 5px;
+}
+
+div.hy {
+   margin-bottom: 15px;
+}
+
+footer {
+    margin: 2% 20%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#klein {
+    font-size: 10pt;
+}
+
+#hintergrund {
+    background-color: rgba(240,240,240,0.7);
+    display: block;
+    width: 20%;
+    margin-left: 40%;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+main {
+    background-image: url("logo/hintergrund.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+html {
+    background-color: #FAB240;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.fett {
+    font-family: "Arial Black";
+}
+
+button#btn {
+    border-radius: 15px;
+    height: 5%;
+    padding: 2%;
+}
