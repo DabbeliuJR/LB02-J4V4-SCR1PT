@@ -1,7 +1,4 @@
-console.log("swag");
-
 const btn = document.querySelector('#btn');
-
 const radioButtonsGender = document.querySelectorAll('input[name="gender"]');
 const radioButtonsAge = document.querySelectorAll('input[name="age"]');
 const radioButtonsHeight = document.querySelectorAll('input[name="height"]');
@@ -10,11 +7,12 @@ const radioButtonsEye = document.querySelectorAll('input[name="eyes"]');
 const radioButtonsHairLenght = document.querySelectorAll('input[name="hairLenght"]');
 const radioButtonsBody = document.querySelectorAll('input[name="bodybuild"]');
 
-
+const btn2 = document.querySelector('#btn2');
 
 
 
 btn.addEventListener("click", () => {
+
     let selectedGender;
     for (const radioButton of radioButtonsGender) {
         if (radioButton.checked) {
@@ -23,7 +21,7 @@ btn.addEventListener("click", () => {
             break;
         }
     }
-    /* Alter */
+
     let selectedAge;
     for (const radioButton of radioButtonsAge) {
         if (radioButton.checked) {
@@ -81,10 +79,38 @@ btn.addEventListener("click", () => {
 
     var summe = eval(Number(selectedAge) + Number(selectedGender) + Number(selectedHeight) + Number(selectedHair) + Number(selectedEye) + Number(selectedhairLenght) + Number(selectedBody));
     console.log(summe);
-    // show the output:
+
     output.innerText = summe  ? `Sie sind ${summe} Kamele wert!` : `Du hast noch nicht alle Felder angewählt`;
     console.log(selectedAge, selectedGender, selectedHeight, selectedHair, selectedEye, selectedhairLenght, selectedBody);
     anzeige.innerText = summe  ? `Sie sind ${summe} Kamele wert!` : `Du hast noch nicht alle Felder angewählt`;
 
+    if(summe > 0){
+        var ergebnisse = [];
+        localStorage.setItem(prompt("Name der berechneten Person"), JSON.stringify(summe));
+    }
+
+
 
 });
+
+btn2.addEventListener("click", () => {
+    let keys = Object.keys(localStorage);
+    keys.forEach(function(key){
+        console.log(key + " : " + localStorage.getItem(key));
+    });
+    let valueLS = Object.values(localStorage);
+    valueLS.forEach(function(value){
+        console.log(value + " : " + localStorage.getItem(value));
+    });
+    output2.innerText = keys  ? `${keys} \n  ${valueLS}` : `Du hast noch nicht alle Felder angewählt`;
+
+
+
+});
+
+btn3.addEventListener("click", () => {
+
+    localStorage.clear()
+
+});
+

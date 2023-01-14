@@ -6,7 +6,8 @@
 
 header{
     background-color: #FAB240;
-    margin: 2% 20%;
+    margin: 2% 15%;
+
 }
 
 
@@ -117,8 +118,21 @@ fieldset {
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 img {
-    height: 20%;
-    width: auto;
+    height: auto;
+    width: 15%;
+}
+
+ul li a{
+    font-family: "Arial Black";
+    font-size: 20pt;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
 div {
@@ -130,7 +144,7 @@ div.hy {
 }
 
 footer {
-    margin: 2% 20%;
+    margin: 2% 15%;
     padding: 5%;
     display: flex;
     justify-content: center;
@@ -151,12 +165,19 @@ footer {
     padding: 10px;
 }
 
+#hintergrund2 {
+    background-color: rgba(240,240,240,0.7);
+    display: block;
+    width: 20%;
+    margin-left: 40%;
+    border-radius: 30px;
+    padding: 10px;
+}
+
 main {
     background-image: url("logo/hintergrund.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 5%;
-    padding-bottom: 5%;
 }
 
 html {
@@ -184,4 +205,50 @@ button#btn {
     border-radius: 15px;
     height: 5%;
     padding: 2%;
+}
+
+button#btn2 {
+    border-radius: 15px;
+    height: 5%;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+button#btn3 {
+    border-radius: 15px;
+    height: 5%;
+    padding: 2%;
+}
+
+#websiteDescribtion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 15%;
+}
+
+h1{
+    padding-bottom: 2%;
+    font-size: 3em;
+}
+
+mark{
+    background-color: #FAB240;
+    padding: 1%;
+    border-radius: 15px;
+    border: 1px solid #333;
+
+}
+
+#colorGradient{
+    height: 5%;
+    background: rgb(250,178,64);
+    background: linear-gradient(180deg, rgba(250,178,64,1) 35%, rgba(250,178,64,0) 100%);
+}
+
+#colorGradient2{
+    height: 5%;
+    background: rgb(250,178,64);
+    background: linear-gradient(0deg, rgba(250,178,64,1) 35%, rgba(250,178,64,0) 100%);
 }
