@@ -175,7 +175,7 @@ footer {
 }
 
 main {
-    background-image: url("logo/hintergrund.jpg");
+    background-image: url("../logo/hintergrund.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

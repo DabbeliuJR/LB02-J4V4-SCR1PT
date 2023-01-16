@@ -1,78 +1,225 @@
 <!DOCTYPE html
-<html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Kamel Rechner</title>
+        <html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title id="anzeige">Kamel Rechner</title>
+  <link rel="icon" type="img" href="logo/Logo.png">
 
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Impressum</li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1>Kamelrechner</h1>
-            <p>dies ist  der kamelrechner</p>
-            <form name="kamelRechner" action="" onSubmit="Ergebnis();return false;" >
-                <input name="Display" class="display" readonly>
+</head>
+<body>
 
-                <fieldset>
-                    <div class="knoepfe">
+<header>
+  <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#klein">Impressum</a></li>
+      </ul>
+      <img src="logo/Logo.png">
+  </nav>
+</header>
 
-                        <input type="radio" id="ma" name="geschlecht" value="5" onClick="addValueMan('5')">
-                        <label for="ma">Männlich</label>
+<main>
+     <div id="colorGradient">
+     </div>
 
-                        <input type="radio" id="wi" name="geschlecht" value="10" onClick="addValueWoman('10')">
-                        <label for="wi">Weiblich</label>
+     <div id="websiteDescribtion">
+         <h1>Kamelrechner</h1>
+         <mark>
+             <p>Wie viele Kamele sind Sie wert? Hier finden Sie es heraus!</p>
+         </mark>
+     </div>
 
-                    </div>
-                </fieldset>
+     <div id="hintergrund">
+      <p class="fett">Geschlecht</p>
+      <div>
+        <input type="radio" name="gender" value="5" id="ma">
+        <label for="ma">Männlich</label>
+      </div>
 
-                <div class="dropdown">
-                    <button class="dropbtn" disabled="disabled">Alter</button>
-                    <div class="dropdown-content">
-                     <fieldset>
-                         <input name="alter" type="radio" id="alter1" value="1" onCLick="addValueAlter1('5')">
-                         <label for="alter1">1</label>
+      <div class="hy">
+        <input type="radio" name="gender" value="10" id="we">
+        <label for="we">Weiblich</label>
+      </div>
 
-                         <input name="alter" type="radio" id="alter2" value="2" onCLick="addValueAlter2('10')">
-                         <label for="alter2">2</label>
+      <p class="fett">Alter</p>
+      <div>
+        <input type="radio" name="age" value="10" id="age1">
+        <label for="age1">0-12 Jahre</label>
+      </div>
 
-                         <input name="alter" type="radio" id="alter3" value="3" onCLick="addValueMan('2')">
-                         <label for="alter3">3</label>
+      <div>
+        <input type="radio" name="age" value="10" id="age2">
+        <label for="age2">13-19 Jahre</label>
+      </div>
 
-                         <input name="alter" type="radio" id="alter4" value="4" onCLick="addValueMan('21')">
-                         <label for="alter4">4</label>
+      <div>
+        <input type="radio" name="age" value="15" id="age3">
+        <label for="age3">20-25 Jahre</label>
+      </div>
 
-                         <input name="alter" type="radio" id="alter5" value="5" onCLick="addValueMan('6')">
-                         <label for="alter5">5</label>
+      <div>
+        <input type="radio" name="age" value="15" id="age4">
+        <label for="age4">26-30 Jahre</label>
+      </div>
 
-                         <input name="alter" type="radio" id="alter6" value="6" onCLick="addValueMan('7')">
-                         <label for="alter6">6</label>
+      <div>
+        <input type="radio" name="age" value="10" id="age5">
+        <label for="age5">31-40 Jahre</label>
+      </div>
+
+      <div>
+        <input type="radio" name="age" value="5" id="age6">
+        <label for="age6">41-50 Jahre</label>
+      </div>
+
+      <div class="hy">
+        <input type="radio" name="age" value="5" id="age7">
+        <label for="age7">51+ Jahre</label>
+      </div>
 
 
-                     </fieldset>
+      <p class="fett">Grösse</p>
+      <div>
+        <input type="radio" name="height" value="5" id="height1">
+        <label for="height1">50-150cm</label>
+      </div>
+
+      <div>
+        <input type="radio" name="height" value="10" id="height2">
+        <label for="height2">151-180cm</label>
+      </div>
+
+      <div>
+        <input type="radio" name="height" value="15" id="height3">
+        <label for="height3">181-190cm</label>
+      </div>
+
+      <div class="hy">
+        <input type="radio" name="height" value="10" id="height4">
+        <label for="height4">191-200cm</label>
+      </div>
+
+
+      <p class="fett">Haarfarbe</p>
+      <div>
+        <input type="radio" name="hairColor" value="15" id="hair1">
+        <label for="hair1">Blond</label>
+      </div>
+
+      <div>
+        <input type="radio" name="hairColor" value="10" id="hair2">
+        <label for="hair2">Braun</label>
+      </div>
+
+      <div>
+        <input type="radio" name="hairColor" value="10" id="hair3">
+        <label for="hair3">Schwarz</label>
+      </div>
+
+      <div>
+        <input type="radio" name="hairColor" value="15" id="hair4">
+        <label for="hair4">Rot</label>
+      </div>
+
+      <div>
+        <input type="radio" name="hairColor" value="5" id="hair5">
+        <label for="hair5">Grau</label>
+      </div>
+
+      <div class="hy">
+        <input type="radio" name="hairColor" value="10" id="hair6">
+        <label for="hair6">Weiss</label>
+      </div>
+
+      <p class="fett">Augenfarbe</p>
+      <div>
+        <input type="radio" name="eyes" value="10" id="eye1">
+        <label for="eye1">Blau</label>
+      </div>
+
+      <div>
+        <input type="radio" name="eyes" value="5" id="eye2">
+        <label for="eye2">Braun</label>
+      </div>
+
+      <div>
+        <input type="radio" name="eyes" value="15" id="eye3">
+        <label for="eye3">Grün</label>
+      </div>
+
+      <div class="hy">
+        <input type="radio" name="eyes" value="15" id="eye4">
+        <label for="eye4">Grau</label>
+      </div>
+
+      <p class="fett">Haarlänge</p>
+      <div>
+        <input type="radio" name="hairLenght" value="5" id="hairlenght1">
+        <label for="hairlenght1">Glatze</label>
+      </div>
+
+      <div>
+        <input type="radio" name="hairLenght" value="10" id="hairlenght2">
+        <label for="hairlenght2">Kurz</label>
+      </div>
+
+      <div>
+        <input type="radio" name="hairLenght" value="10" id="hairlenght3">
+        <label for="hairlenght3">Mittel</label>
+      </div>
+
+      <div class="hy">
+        <input type="radio" name="hairLenght" value="10" id="hairlenght4">
+        <label for="hairlenght4">Lang</label>
+      </div>
+
+      <p class="fett">Körperbau</p>
+      <div>
+        <input type="radio" name="bodybuild" value="10" id="body1">
+        <label for="body1">Dünn</label>
+      </div>
+
+      <div>
+        <input type="radio" name="bodybuild" value="15" id="body2">
+        <label for="body2">Kräftig</label>
+      </div>
+
+      <div class="hy">
+        <input type="radio" name="bodybuild" value="5" id="body3">
+        <label for="body3">Dick</label>
+      </div>
 
 
 
-                    </div>
-                </div>
-            </form>
+      <p>
+        <button class="fett" id="btn">Kamelberechnung</button>
+      </p>
 
-            <p>
-                <button class="btn" onClick="Ergebnis()">Ergebnis anzeigen</button>
-            </p>
-            <p id="output"></p>
-        </main>
-        <footer>
+      <p id="output"></p>
+     </div>
 
-        </footer>
-        <script src="script.js"></script>
-    </body>
+    <div id="hintergrund2">
+        <p>
+            <button class="fett" id="btn2">Letzte Ergebnisse</button>
+        </p>
+
+        <p id="output2" rows="2" cols="30"></p>
+        <p>
+            <button class="fett" id="btn3">Bisherige Ergebnisse löschen</button>
+        </p>
+    </div>
+
+    <div id="colorGradient2">
+    </div>
+</main>
+<footer>
+  <h2>Impressum</h2>
+  <p>Diese Webseite wurde von Samuel Tim Wernli und Josia Lucas Baumann verwirklicht um Ihnen zu demonstrieren, wie viel Wert Sie oder Ihre Mitmenschen in Kamelen hätten.</p>
+  <br>
+  <p id="klein">(Alle Angaben wurden rein hypothetisch berechnet und sollen Niemanden angreifen)</p>
+</footer>
+<script src="javascript/script.js"></script>
+</body>
 </html>
